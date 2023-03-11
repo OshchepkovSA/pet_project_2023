@@ -1,6 +1,19 @@
-[![Google Colab](https://img.shields.io/badge/google-%D1%81olab-orange)](hhttps://colab.research.google.com/drive/1I3NNFjwNw7NvbfgFO_HIPTDAKbfyW1ZA)
-
 ## Тестовое задание от [MindSet](https://m-s-e-t.com/) на вакансию Удаленный стажер-аналитик (computer vision)
 
-* [Обзор](https://docs.google.com/document/d/1fkCP5Gdgz494SPJJsz9V-ONrVJP1FZbzqxQNquQ8Y0c/edit)
-* Решение [![Google Colab](https://img.shields.io/badge/google-%D1%81olab-orange)](https://colab.research.google.com/drive/1_eiGzej76VqRBrOc225jjIPIUhPvyFGq)
+* [Review](https://github.com/OshchepkovSA/pet_project_2023/blob/master/test_mindset_cv/Review%20of%20AI%20in%20the%20construction%20industry.docx)
+* [Solution](https://github.com/OshchepkovSA/pet_project_2023/blob/master/test_mindset_cv/Task_cv_v2.ipynb)
+* [![Solution in GoogleColab](https://img.shields.io/badge/google-%D1%81olab-orange)](https://colab.research.google.com/drive/1I3NNFjwNw7NvbfgFO_HIPTDAKbfyW1ZA)
+
+Вам необходимо решить модельный бизнес кейс от некоторого заказчика - строительной компании, которая занимается возведением многоквартирных домов.
+
+Заказчику необходимо подсчитать сколько в уже построенном районе находится окон в жилых зданиях, а также количество этажей в здании и количество колонн (вертикальных рядов окон)
+
+Также заказчик хотел бы выделять на фото фасад "главного" здания, если на изображении несколько зданий)
+
+Вам необходимо:
+
+1. Сделать обзор всевозможных решений решений по применению ИИ в строительстве, проектировании и эксплуатации и продажи квартир, показать вашу экспертизу и подготовку
+2. Провести описание подходов, которые вы планируете использовать для решения задачи
+3. Собрать датасет на котором изображены многоквартирные жилые дома, либо использовать синтетические данные
+4. Провести необходимую для вас разметку датасета (сегментация фасада, окна)
+5. САМЫЙ ВАЖНЫЙ ПУНКТ - обучить собственный алгоритм (pytorch, tensorflow) сегментации фасада главного здания, а также алгоритм определения числа окон, числа этажей и числа колонн на выбор, можно решить несколько). То есть сегментация + одна из задач по подсчёту.
