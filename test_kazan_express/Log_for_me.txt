@@ -1,0 +1,111 @@
+# @title Log_for_me.txt
+### 1 stage
+### description
+# 4 base + 'cointegrated/rubert-tiny' /8 min, 312 inputs
+# ep: 49, taked: 2.848, train_loss: 0.378, train_f1_score: 0.897, val_loss: 1.914, val_f1_score: 0.612
+# 4 base + 'sberbank-ai/ruBert-base' /24 min, 768 inputs
+# ep: 49, taked: 4.306, train_loss: 0.284, train_f1_score: 0.929, val_loss: 1.733, val_f1_score: 0.633
+# 4 base + 'DeepPavlov/rubert-base-cased-conversational' /26 min, 768 inputs + 50 epoch
+# ep: 44, taked: 2.485, train_loss: 0.290, train_f1_score: 0.937, val_loss: 1.507, val_f1_score: 0.650
+
+### title
+# 4 base + 'DeepPavlov' /768 inputs
+# val_f1_score: 0.750 /reboot comp
+# 4 base + 'sberbank_large' /1024 inputs
+# ep: 92, taked: 5.679, train_loss: 0.216, train_f1_score: 0.930, val_loss: 1.173, val_f1_score: 0.789
+
+### images
+# 4 base + 'resnet18' /512 inputs
+# ep: 99, taked: 5.682, train_loss: 1.030, train_f1_score: 0.704, val_loss: 2.325, val_f1_score: 0.519
+# 5 base + 'resnet34' /1024 inputs
+# ep: 99, taked: 5.028, train_loss: 0.723, train_f1_score: 0.777, val_loss: 2.167, val_f1_score: 0.566
+
+### shop_title
+# 4 base + 'DeepPavlov' /768 inputs
+# ep: 99, taked: 5.419, train_loss: 2.044, train_f1_score: 0.438, val_loss: 3.873, val_f1_score: 0.324
+
+### attributes
+# 5 base + 'DeepPavlov' /768 inputs
+# ep: 82, taked: 3.704, train_loss: 1.911, train_f1_score: 0.628, val_loss: 3.518, val_f1_score: 0.391
+
+
+### 2 stage
+# 4 base + 'DeepPavlov' description + 'DeepPavlov' title /1540 inputs
+# val_f1_score: 0.807 /reboot comp
+
+# 4 base + 'DeepPavlov' description + 'resnet18' /1280 inputs
+# ep: 99, taked: 7.696, train_loss: 0.432, train_f1_score: 0.863, val_loss: 1.417, val_f1_score: 0.703
+
+# 4 base + 'DeepPavlov' description + 'sberlarge' title /1792 inputs
+# ep: 62, taked: 9.031, train_loss: 0.192, train_f1_score: 0.936, val_loss: 1.058, val_f1_score: 0.800
+
+# 4 base + 'DeepPavlov' description + 'DeepPavlov' shop_title /1540 inputs
+# ep: 99, taked: 8.348, train_loss: 0.388, train_f1_score: 0.875, val_loss: 1.864, val_f1_score: 0.657
+
+# 5 base + 'DeepPavlov' title + 'resnet34' /1792 inputs
+# ep: 99, taked: 5.733, train_loss: 0.238, train_f1_score: 0.921, val_loss: 1.104, val_f1_score: 0.786
+
+# 5 base + 'DeepPavlov' title + DeepPavlov'attributes  /1540 inputs
+# ep: 63, taked: 5.044, train_loss: 0.226, train_f1_score: 0.927, val_loss: 1.149, val_f1_score: 0.778
+
+
+### 3 stage
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'DeepPavlov' attributes /inputs 2309
+# ep: 27, taked: 8.438, train_loss: 0.140, train_f1_score: 0.965, val_loss: 0.803, val_f1_score: 0.799
+
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'resnet34' /inputs 2565
+# ep: 47, taked: 9.540, train_loss: 0.111, train_f1_score: 0.972, val_loss: 0.859, val_f1_score: 0.797
+
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'sberlarge' title /inputs 2565
+# ep: 28, taked: 9.662, train_loss: 0.128, train_f1_score: 0.968, val_loss: 0.693, val_f1_score: 0.827
+
+# 5 base + 'DeepPavlov' title + 'sberlarge' description + 'sberlarge' title /inputs 2821
+# ep: 46, taked: 10.277, train_loss: 0.076, train_f1_score: 0.980, val_loss: 0.747, val_f1_score: 0.825
+
+# 5 base + 'DeepPavlov' title + 'sberbankroberta' title + 'sberlarge' title /inputs 2821
+# ep: 46, taked: 160.727, train_loss: 0.090, train_f1_score: 0.977, val_loss: 0.682, val_f1_score: 0.837
+
+
+### 4 stage
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'sberlarge' title + 'cointegrated' description /inputs 2877
+# ep: 27, taked: 10.292, train_loss: 0.134, train_f1_score: 0.967, val_loss: 0.680, val_f1_score: 0.826
+
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'sberlarge' title + 'sberbank' description /inputs 3333
+# ep: 37, taked: 12.268, train_loss: 0.089, train_f1_score: 0.978, val_loss: 0.717, val_f1_score: 0.828
+
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'sberlarge' title + 'sberlarge' description /inputs 3589
+# ep: 6, taked: 11.225, train_loss: 0.065, train_f1_score: 0.982, val_loss: 0.815, val_f1_score: 0.827
+
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'sberlarge' title + 'sberroberta' description /inputs 3589
+# ep: 68, taked: 11.272, train_loss: 0.061, train_f1_score: 0.984, val_loss: 0.767, val_f1_score: 0.832
+
+# 5 base + 'DeepPavlov' title + 'sberlarge' description + 'sberlarge' title + 'sberroberta' description /inputs 3845
+# ep: 38, taked: 12.276, train_loss: 0.092, train_f1_score: 0.977, val_loss: 0.688, val_f1_score: 0.833
+
+# 5 base + 'sberroberta' description + 'sberlarge' description + 'sberlarge' title + 'sberroberta' title /inputs 4101
+# ep: 20, taked: 87.236, train_loss: 0.186, train_f1_score: 0.954, val_loss: 0.601, val_f1_score: 0.840
+
+# 5 base + 'DeepPavlov' title + 'sberlarge' description + 'sberlarge' title + 'sberroberta' title /inputs 3845
+# ep: 34, taked: 87.587, train_loss: 0.088, train_f1_score: 0.978, val_loss: 0.652, val_f1_score: 0.843
+
+# 5 base + 'DeepPavlov' title + 'sberbankroberta' title + 'sberlarge' title + img_to_text /inputs 3589
+# ep: 72, taked: 79.510, train_loss: 0.089, train_f1_score: 0.983, val_loss: 0.653, val_f1_score: 0.839
+
+# 5 base + 'DeepPavlov' title + 'sberbankroberta' title + 'sberlarge' title + 'facebook' title /inputs 3589
+# ep: 67, taked: 81.063, train_loss: 0.258, train_f1_score: 0.942, val_loss: 0.644, val_f1_score: 0.833
+
+
+### 5 stage
+# 5 base + 'DeepPavlov' title + 'DeepPavlov' description + 'sberlarge' title + 'sberroberta' title  + 'cointrgrated' description/inputs 3901
+# ep: 58, taked: 87.459, train_loss: 0.059, train_f1_score: 0.984, val_loss: 0.721, val_f1_score: 0.843
+
+# 5 base + 'DeepPavlov' title + 'sberbankroberta' title + 'train_features_git' + 'facebook' title + 'Den4ikAI' title /inputs 4101
+# ep: 19, taked: 93.218, train_loss: 0.087, train_f1_score: 0.982, val_loss: 0.633, val_f1_score: 0.845
+
+# 5 base + 'DeepPavlov' title + 'sberbankroberta' title + 'train_features_git' + 'contegreted base' title + 'Den4ikAI' title /inputs 4101
+# ep: 90, taked: 12.703, train_loss: 0.125, train_f1_score: 0.975, val_loss: 0.615, val_f1_score: 0.845
+
+# 5 base + 'DeepPavlov' title + 'sberbankroberta' title + 'DeepPavlov' description + 'contegreted base' title + 'Den4ikAI' title /inputs 4101
+# ep: 33, taked: 13.077, train_loss: 0.119, train_f1_score: 0.980, val_loss: 0.576, val_f1_score: 0.853
+
+# 5 base + 'DeepPavlov' title + 'image_to_text' + 'DeepPavlov' description + 'contegreted base' title + 'Den4ikAI' title /inputs 3845
